@@ -1,4 +1,3 @@
-// server/db.js
 import mysql from "mysql2/promise";
 
 const db = await mysql.createConnection({
@@ -8,4 +7,4 @@ const db = await mysql.createConnection({
   database: "photoclub",
 });
 
-export default db;
+export default db; // <--- default export here

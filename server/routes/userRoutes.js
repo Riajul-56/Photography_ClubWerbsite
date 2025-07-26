@@ -1,6 +1,6 @@
-// server/routes/user.js
 import express from "express";
-import db from "../db.js";
+import db from "../config/db.js";
+import { getUserDashboard } from "../controllers/user.controller.js"; // ✅ import it
 
 const router = express.Router();
 
@@ -16,5 +16,8 @@ router.post("/register", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+// ✅ ADD THIS ROUTE
+router.get("/dashboard", getUserDashboard);
 
 export default router;

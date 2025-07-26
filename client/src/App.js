@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AdminPanel from "./components/AdminPanel";
-import UserDashboard from "./components/UserDashboard";
+import UserPanel from "./components/UserPanel";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
           <AdminPanel />
         </div>
         <div className="col-md-6">
-          <UserDashboard />
+          <UserPanel />
         </div>
       </div>
     </div>
