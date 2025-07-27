@@ -2,6 +2,8 @@
 import express from "express";
 import cors from "cors";
 import adminDashboardRoutes from "./routes/adminDashboard.js";
+import adminRoutes from "./routes/admin.routes.js"; // ✅ add this
+
 import photoRoutes from "./routes/photoRoutes.js";
 import userRoutes from "./routes/userRoutes.js"; // ✅ add this
 
@@ -10,9 +12,8 @@ app.use(cors());
 app.use(express.json());
 
 
-
-
 app.use("/api/admin", adminDashboardRoutes);
+app.use("/api/admin", adminRoutes); // New route for adding admin
 app.use("/api/user", userRoutes); // ✅ to register new users
 app.use("/api/photos", photoRoutes);
 
